@@ -83,11 +83,11 @@ function App() {
         <p>WARNING: Don't refresh the page, otherwise you will start from the beginning</p>
       </div>
 
-      <div className='row pb-3' name='count'>
+      <div className='row py-3' name='count'>
         <div class="col">
           <div class="d-flex justify-content-between align-items-center">
             <div>
-              <p>Categorized: {categorizedCnt}/{totalCnt}</p>
+              <text>Categorized: {categorizedCnt}/{totalCnt}</text>
             </div>
             <div>
               <button className="btn btn-outline-primary btn-sm" onClick={download}>Download Result</button>
@@ -97,9 +97,9 @@ function App() {
       </div>
 
       <h4>To Me, It's:</h4>
-      <div className='row pb-5' name='categories'>
+      <div className='row' name='categories'>
         {importance.map((cat, index) => (
-          <div className='col' key={index}>
+          <div className='col-12 col-sm-6 col-md-4 col-lg pb-5' key={index}>
             <h4>{cat}</h4>
             {categories[cat].length > 0 && (
               <Deck cards={categories[cat]} reverse={true} />
@@ -117,19 +117,19 @@ function App() {
       </div>
 
       <div className='row justify-content-center' name='buttons'>
-          <div className='col'>
+          <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
             <button className="btn btn-danger w-100" onClick={() => categorize(importance[0])}>Most Important</button>
           </div>
-          <div className='col'>
+          <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
             <button className="btn btn-warning w-100" onClick={() => categorize(importance[1])}>Very Important</button>
           </div>
-          <div className='col'>
+          <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
             <button className="btn btn-primary w-100" onClick={() => categorize(importance[2])}>Important</button>
           </div>
-          <div className='col'>
+          <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
             <button className="btn btn-info w-100" onClick={() => categorize(importance[3])}>Somewhat Important</button>
           </div>
-          <div className='col'>
+          <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
             <button className="btn btn-secondary w-100" onClick={() => categorize(importance[4])}>Not Important</button>
           </div>
       </div>
