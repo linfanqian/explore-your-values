@@ -96,7 +96,32 @@ function App() {
         </div>
       </div>
 
-      <h4>To Me, It's:</h4>
+      <div className='row' name='deck'>
+        <h4>Please categorize this value:</h4>
+        {cards.length > 0 && (
+          <div className='pb-3' style={{ maxWidth: '500px' }}><Deck cards={cards} reverse={false} /></div>
+        )}
+      </div>
+
+      <div className='row justify-content-center pb-5' name='buttons'>
+        <h5>To me, it's:</h5>
+        <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
+          <button className="btn btn-danger w-100" onClick={() => categorize(importance[0])}>Most Important</button>
+        </div>
+        <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
+          <button className="btn btn-warning w-100" onClick={() => categorize(importance[1])}>Very Important</button>
+        </div>
+        <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
+          <button className="btn btn-primary w-100" onClick={() => categorize(importance[2])}>Important</button>
+        </div>
+        <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
+          <button className="btn btn-info w-100" onClick={() => categorize(importance[3])}>Somewhat Important</button>
+        </div>
+        <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
+          <button className="btn btn-secondary w-100" onClick={() => categorize(importance[4])}>Not Important</button>
+        </div>
+      </div>
+
       <div className='row' name='categories'>
         {importance.map((cat, index) => (
           <div className='col-12 col-sm-6 col-md-4 col-lg pb-5' key={index}>
@@ -107,31 +132,6 @@ function App() {
             <button className="btn btn-outline-primary btn-sm" onClick={() => openModal(cat)}>See List</button>
           </div>
         ))}
-      </div>
-
-      <div className='row' name='deck'>
-        <p className="fw-bold">Please categorize this value:</p>
-        {cards.length > 0 && (
-          <div className='pb-5' style={{ maxWidth: '500px' }}><Deck cards={cards} reverse={false} /></div>
-        )}
-      </div>
-
-      <div className='row justify-content-center' name='buttons'>
-          <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
-            <button className="btn btn-danger w-100" onClick={() => categorize(importance[0])}>Most Important</button>
-          </div>
-          <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
-            <button className="btn btn-warning w-100" onClick={() => categorize(importance[1])}>Very Important</button>
-          </div>
-          <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
-            <button className="btn btn-primary w-100" onClick={() => categorize(importance[2])}>Important</button>
-          </div>
-          <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
-            <button className="btn btn-info w-100" onClick={() => categorize(importance[3])}>Somewhat Important</button>
-          </div>
-          <div className='col-12 col-sm-6 col-md-4 col-lg py-1'>
-            <button className="btn btn-secondary w-100" onClick={() => categorize(importance[4])}>Not Important</button>
-          </div>
       </div>
 
 
