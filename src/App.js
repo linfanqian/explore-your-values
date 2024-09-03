@@ -80,7 +80,7 @@ function App() {
   return (
     <div className='container p-3'>
       <div className='row pt-3 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-3'>
-        <p>WARNING: Don't refresh the page, otherwise you will start from the beginning</p>
+        <p>WARNING: Don't refresh the page, otherwise you will restart from the beginning</p>
       </div>
 
       <div className='row py-3' name='count'>
