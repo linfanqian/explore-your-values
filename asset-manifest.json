@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/explore-your-values/static/css/main.d5289b2f.css",
+    "main.js": "/explore-your-values/static/js/main.537a77bf.js",
+    "static/js/453.ec8d7c31.chunk.js": "/explore-your-values/static/js/453.ec8d7c31.chunk.js",
+    "index.html": "/explore-your-values/index.html",
+    "main.d5289b2f.css.map": "/explore-your-values/static/css/main.d5289b2f.css.map",
+    "main.537a77bf.js.map": "/explore-your-values/static/js/main.537a77bf.js.map",
+    "453.ec8d7c31.chunk.js.map": "/explore-your-values/static/js/453.ec8d7c31.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5289b2f.css",
+    "static/js/main.537a77bf.js"
+  ]
+}
