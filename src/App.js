@@ -145,12 +145,11 @@ function App() {
               </div>
               <div className="modal-body">
                 {categories[activeCategory].map((item, idx) => (
-                  <div key={idx}>
-                    <p>{item.name} - {item.description}
-                      <button className="btn btn-outline-danger btn-sm" onClick={() => removeFromCategory(item)} style={{ border: 'none' }}>
-                        <img src="./icons-delete-trash-24.png"></img>
-                      </button>
-                    </p>
+                  <div key={idx} className='py-1'>
+                    <text className='pe-2'>{item.name} - {item.description}</text>
+                    <button className="btn btn-outline-danger btn-sm" onClick={() => removeFromCategory(item)}>
+                      Remove
+                    </button>
                   </div>
                 ))}
               </div>
