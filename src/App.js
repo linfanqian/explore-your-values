@@ -148,7 +148,7 @@ function App() {
                   <div key={idx}>
                     <p>{item.name} - {item.description}
                       <button className="btn btn-outline-danger btn-sm" onClick={() => removeFromCategory(item)} style={{ border: 'none' }}>
-                        <img src="/icons-delete-trash-24.png"></img>
+                        <img src="./icons-delete-trash-24.png"></img>
                       </button>
                     </p>
                   </div>
